@@ -15,6 +15,10 @@ node {
       } else {
          bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean package/)
       }
+      
+      sh label: '', script: '''sleep 5s
+                            sudo cp /Users/Shared/Jenkins/Home/workspace/SampleMavenAutomatedPipeline/target/*.war /Users/Shared/tu455sq/Documents/Scripts/
+    '''
    }
    
     stage('Deployment on Destination Server') {
@@ -26,7 +30,7 @@ node {
       
    }
      
- /*  stage('Archive Artifacts') {
+   stage('Archive Artifacts') {
     
      archiveArtifacts 'target/*.war'
    }
