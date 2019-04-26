@@ -23,7 +23,7 @@ node {
    
    stage('Deployment on Destination Server') {
     
-    sh label: '', script: '''sleep 10s
+    sh label: '', script: '''sleep 30s
                             pwd
                             sudo /Users/tu455sq/Documents/Scripts/deploy.sh
     '''
