@@ -26,10 +26,10 @@ node {
       
    }
    
-   stage('Archive Artifacts') {
+   //stage('Archive Artifacts') {
     
-      archiveArtifacts 'target/*.war'
-   }
+    //  archiveArtifacts 'target/*.war'
+   //}
    
  
    
