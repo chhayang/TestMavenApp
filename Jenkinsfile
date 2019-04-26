@@ -2,7 +2,7 @@ node {
    def mvnHome
    stage('Get Code from GIT') { // for display purposes
       // Get some code from a GitHub repository
-      git 'https://github.com/chhayang/TestMaven'
+      git 'https://github.com/chhayang/TestMavenApp.git'
       // Get the Maven tool.
       // ** NOTE: This 'M3' Maven tool must be configured
       // **       in the global configuration.           
