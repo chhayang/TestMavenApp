@@ -16,12 +16,6 @@ node {
          bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean package/)
       }
    }
-     
-     
- /*  stage('Archive Artifacts') {
-    
-     archiveArtifacts 'target/*.war'
-   }
    
     stage('Deployment on Destination Server') {
     
@@ -31,9 +25,16 @@ node {
     '''
       
    }
+     
+   stage('Archive Artifacts') {
+    
+     archiveArtifacts 'target/*.war'
+   }
+   
+
  
    
-   stage('Send Email After Completion'){ 
+ /*  stage('Send Email After Completion'){ 
    emailext body: '$DEFAULT_CONTENT', subject: '$DEFAULT_SUBJECT', to: 'chhayang.patel@ey.com'
    } */
 }
