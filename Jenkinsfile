@@ -17,7 +17,13 @@ node {
       }
    }
      
-   stage('Deployment on Destination Server') {
+     
+   stage('Archive Artifacts') {
+    
+     archiveArtifacts 'target/*.war'
+   }
+   
+    stage('Deployment on Destination Server') {
     
     sh label: '', script: '''sleep 5s
                             pwd
@@ -25,12 +31,6 @@ node {
     '''
       
    }
-   
-   //stage('Archive Artifacts') {
-    
-    //  archiveArtifacts 'target/*.war'
-   //}
-   
  
    
    stage('Send Email After Completion'){ 
