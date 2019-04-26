@@ -18,7 +18,7 @@ node {
    }
      
      
-   stage('Archive Artifacts') {
+ /*  stage('Archive Artifacts') {
     
      archiveArtifacts 'target/*.war'
    }
@@ -35,5 +35,5 @@ node {
    
    stage('Send Email After Completion'){ 
    emailext body: '$DEFAULT_CONTENT', subject: '$DEFAULT_SUBJECT', to: 'chhayang.patel@ey.com'
-   }
+   } */
 }
