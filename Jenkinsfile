@@ -21,6 +21,12 @@ node {
     '''
    }
    
+   stage('Archive Artifacts') {
+    
+     archiveArtifacts 'target/*.war'
+  
+   }
+   
     stage('Deployment on Destination Server') {
     
     sh label: '', script: '''sleep 5s
@@ -30,10 +36,7 @@ node {
       
    }
      
-   stage('Archive Artifacts') {
-    
-     archiveArtifacts 'target/*.war'
-   }
+   
    
 
  
