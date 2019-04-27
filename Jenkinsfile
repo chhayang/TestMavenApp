@@ -17,7 +17,7 @@ node {
       }
       
       sh label: '', script: '''sleep 5s
-                            sudo cp /Users/Shared/Jenkins/Home/workspace/SampleMavenAutomatedPipeline/target/*.war /Users/Shared/tu455sq/Documents/Scripts/
+                            sudo cp /Users/Shared/Jenkins/Home/workspace/SampleMavenAutomatedPipeline/target/*.war /Users/tu455sq/Documents/Scripts/
     '''
    }
    
@@ -38,7 +38,7 @@ node {
 
  
    
- /*  stage('Send Email After Completion'){ 
+   stage('Send Email After Completion'){ 
    emailext body: '$DEFAULT_CONTENT', subject: '$DEFAULT_SUBJECT', to: 'chhayang.patel@ey.com'
-   } */
+   } 
 }
